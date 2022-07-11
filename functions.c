@@ -1,4 +1,58 @@
 #include "main.h"
+<<<<<<< HEAD
+#include <stdio.h>
+#include <stdarg.h>
+/**
+ * print_c - prints character
+ * @args: character argument
+ * Return: number of chacters
+ */
+int print_c(va_list args)
+{
+	int c;
+	c va_arg(args, int);
+	return (putchar(c));
+}
+/**
+ * print_s - prints a string
+ * @args: string argument
+ * Return: number of chacters
+ */
+int print_s(va_list args)
+{
+	int i, count = 0;
+	char *str;
+
+	i = 0;
+	str = va_arg(args, char*);
+	if (str == NULL)
+		str = "(null)";
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+		count++;
+	}
+	return (count);
+}
+/**
+ * print_percent - pass the percent sing
+ * @args: string argument
+ * Return: return the percent sing
+ *
+ */
+int print_percent(va_list args)
+{
+	char *str;
+
+	str = "%";
+	if (va_arg(args, int) == *str)
+	{
+		return (*str);
+	}
+	return (*str);
+}
+=======
 
 /************************* PRINT CHAR *************************/
 
@@ -186,3 +240,4 @@ int print_binary(va_list types, char buffer[],
 	}
 	return (count);
 }
+>>>>>>> f794eb6a478528b6532587600895a8c0a2aa7e51
