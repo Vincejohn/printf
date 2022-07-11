@@ -15,7 +15,7 @@ typedef struct vtype
 } vtype_t;
 int _printf(const char *format, ...);
 void print_char(va_list valist);
-void print_int(va_list valist);
+void print_int(va_iilist valist);
 void print_float(va_list valist);
 void print_string(va_list valist);
 void _write_buffer(char *buffer, int *index);
@@ -44,5 +44,6 @@ void format_o(va_list valist, char *buffer, int *index);
 void format_b(va_list valist, char *buffer, int *index);
 void format_r(va_list valist, char *buffer, int *index);
 void format_R(va_list valist, char *buffer, int *index);
+int _putchar(char c);
 
 #endif /* MAIN_H */
