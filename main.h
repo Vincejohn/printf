@@ -40,6 +40,7 @@ struct fmt
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
+<<<<<<< HEAD
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 
@@ -113,5 +114,38 @@ int is_digit(char);
 
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
+=======
+void print_char(va_list valist);
+void print_int(va_iilist valist);
+void print_float(va_list valist);
+void print_string(va_list valist);
+void _write_buffer(char *buffer, int *index);
+int _strlen(char *s);
+char *_memcpy(char *dest, char *src, unsigned int n);
+void format_s(va_list valist, char *buffer, int *index);
+void format_c(va_list valist, char *buffer, int *index);
+void format_d(va_list valist, char *buffer, int *index);
+char *itos(char str[], long int num);
+char *utos(char str[], int num);
+int num_len(int num);
+int float_len(double f);
+void format_i(va_list valist, char *buffer, int *index);
+void format_u(va_list valist, char *buffer, int *index);
+void format_perc(va_list valist, char *buffer, int *index);
+void format_p(va_list valist, char *buffer, int *index);
+void format_lx(va_list valist, char *buffer, int *index);
+char *tostring(char str[], int num);
+int num_len(int num);
+void reset_buffer(char buffer[]);
+void *rot13(char *s);
+void rev_string(char *s);
+void format_h(va_list valist, char *buffer, int *index);
+void format_ch(va_list valist, char *buffer, int *index);
+void format_o(va_list valist, char *buffer, int *index);
+void format_b(va_list valist, char *buffer, int *index);
+void format_r(va_list valist, char *buffer, int *index);
+void format_R(va_list valist, char *buffer, int *index);
+int _putchar(char c);
+>>>>>>> 3c8179d8336c0cdd963726c361ebedbfa271c8d6
 
 #endif /* MAIN_H */
