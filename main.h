@@ -116,7 +116,7 @@ long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 =======
 void print_char(va_list valist);
-void print_int(va_iilist valist);
+void print_int(va_list valist);
 void print_float(va_list valist);
 void print_string(va_list valist);
 void _write_buffer(char *buffer, int *index);
